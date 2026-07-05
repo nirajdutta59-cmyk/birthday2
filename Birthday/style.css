@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4d6d, #ffb3c1);
+    overflow-x: hidden;
+    transition: 1s;
+    padding: 20px;
+}
+
+/* Centered content block with optimal width scaling */
+.container {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Scaled up Headings */
+h1 {
+    font-size: 48px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin: 15px;
+    color: #ffe600;
+    font-size: 36px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Enlarged Photo Canvas with Glow */
+.photo {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+    border: 6px solid white;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.7);
+    transition: 1s;
+    margin-bottom: 30px;
+}
+
+/* Modern Letter Card for the Typing Message */
+.message-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    max-width: 100%;
+    text-align: left;
+    /* Left-aligned like a real letter */
+}
+
+/* Styling for the Letter Text */
+#typing {
+    font-size: 20px !important;
+    color: #ffffff !important;
+    line-height: 1.8 !important;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: none;
+    white-space: pre-wrap;
+    /* Keeps clean structural spacing */
+}
+
+/* Floating Elements Layout */
+.heart {
+    position: absolute;
+    animation: float 6s linear forwards;
+    z-index: 1;
+    filter: drop-shadow(0 0 8px rgba(255, 77, 109, 0.6));
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(105vh) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.rose {
+    position: absolute;
+    animation: fall 7s linear forwards;
+    z-index: 1;
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.5));
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Interactive Gift Elements */
+#giftBox {
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#giftImage {
+    width: 220px;
+    /* Bigger presentation */
+    transition: .4s;
+}
+
+#giftImage:hover {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+/* Mobile Friendly Optimization */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .photo {
+        width: 260px;
+        height: 260px;
+    }
+
+    #typing {
+        font-size: 16px !important;
+    }
+
+    .message-card {
+        padding: 20px;
+    }
+}
+
+/* Futuristic Romantic Highlight Glow */
+.glow-text {
+    color: #ff4d6d !important;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.6), 0 0 20px rgba(255, 77, 109, 0.4);
+    transition: all 0.3s ease;
+}
